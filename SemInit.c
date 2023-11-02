@@ -30,7 +30,7 @@ int main(void)
         perror("semget");
         exit(1); 
     }
-/* initialize semaphore #0 to 1: */ arg.val = 0;
+/* initialize semaphore #0 to 1: */ arg.val = 1;
     if (semctl(semid, 0, SETVAL, arg) == -1) 
     {
         perror("semctl");
